@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.IUserDao">
+    <update id="add">
+        update t_account set money = money + #{money} where username = #{username}
+    </update>
+    <update id="reduceMoney">
+        update t_account set money = money - #{money} where username = #{username}
+    </update>
+
+    <select id="listAll" resultType="com.pojo.User">
+        select * from t_account
+    </select>
+</mapper>

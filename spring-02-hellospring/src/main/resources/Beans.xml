@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--
+        传统java创建对象：
+            返回值类型 变量名 = new 对象()
+             Hello hello = new Hello();
+        交给spring容器去创建：
+            id：变量名
+            class：类路径 new Hello()
+            property:给属性赋值
+    -->
+    <bean id="hello" class="com.com.nik.pojo.Hello">
+        <property name="name" value="nkc"/>
+    </bean>
+</beans>

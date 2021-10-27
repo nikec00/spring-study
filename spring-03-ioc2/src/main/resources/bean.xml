@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <!--方式1：参数名-->
+<!--    <bean id="user" class="com.com.nik.pojo.User">-->
+<!--        <property name="name" value="nkc"/>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash;方式1：根据参数下标去赋值&ndash;&gt;-->
+<!--    <bean id="user" class="com.com.nik.pojo.User">-->
+<!--        <constructor-arg index="0" value="nkc"/>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash;方式2：根据参数类型赋值&ndash;&gt;-->
+<!--    <bean id="user" class="com.com.nik.pojo.User">-->
+<!--        <constructor-arg type="java.lang.String" value="wkn"/>-->
+<!--    </bean>-->
+    <!--方式3：根据参数的名称来赋值-->
+    <bean id="user" class="com.com.nik.pojo.User" name="daddda">
+        <constructor-arg name="name" value="zbs"/>
+    </bean>
+    <alias name="user" alias="asdadda"/>
+</beans>

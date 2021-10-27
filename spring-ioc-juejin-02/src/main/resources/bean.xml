@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <beans>
+        <!--byName-->
+        <bean id="person" class="com.bean.Person">
+            <property name="name" value="小倪"/>
+            <property name="sex" value="男"/>
+            <property name="age" value="23"/>
+        </bean>
+
+        <!--byType-->
+        <bean id="user" class="com.bean.User">
+            <property name="id" value="1"/>
+            <property name="person" ref="person"/>
+        </bean>
+
+
+        <bean id="demoMySQLDao" class="com.oftype.dao.impl.DemoMySQLDaoImpl"/>
+        <bean id="demoOracleLDao" class="com.oftype.dao.impl.DemoOracleDaoImpl"/>
+        <bean id="demoPostgreDao" class="com.oftype.dao.impl.DemoPostgresDaoImpl"/>
+
+    </beans>
+</beans>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/aop
+       https://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+
+    <!--注册bean-->
+    <bean id="log" class="com.nik.log.Log"/>
+    <bean id="afterLog" class="com.nik.log.AfterLog"/>
+    <bean id="userService" class="com.nik.com.service.UserServiceImpl"/>
+<!--    &lt;!&ndash;导入aop：需要导入aop约束&ndash;&gt;-->
+<!--    <aop:config>-->
+<!--        &lt;!&ndash;切入点：expression：表达式 execution(要执行的位置)&ndash;&gt;-->
+<!--        <aop:pointcut id="pointCut" expression="execution(* com.nik.com.service.UserServiceImpl.*(..))"/>-->
+<!--        <aop:advisor advice-ref="log" pointcut-ref="pointCut"/>-->
+<!--        <aop:advisor advice-ref="afterLog" pointcut-ref="pointCut"/>-->
+<!--    </aop:config>-->
+
+
+
+<!--    &lt;!&ndash;方式二&ndash;&gt;-->
+<!--    <bean id="diy" class="com.nik.aspect.DiyPointCot"/>-->
+<!--    <aop:config>-->
+<!--        &lt;!&ndash;自定义切面&ndash;&gt;-->
+<!--        <aop:aspect ref="diy">-->
+<!--            &lt;!&ndash;切入点&ndash;&gt;-->
+<!--            <aop:pointcut id="pointCut" expression="execution(* com.nik.com.service.UserServiceImpl.*(..))"/>-->
+<!--            &lt;!&ndash;前置通知&ndash;&gt;-->
+<!--            <aop:before method="before" pointcut-ref="pointCut"/>-->
+<!--            &lt;!&ndash;后置通知&ndash;&gt;-->
+<!--            <aop:after method="after" pointcut-ref="pointCut"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
+<!--    <bean id="anno" class="com.nik.aspect.AnnPointCut"/>-->
+    <!--开启注解支持 proxy-target-class="false" jdk代理；true为cjlib代理-->
+    <aop:aspectj-autoproxy proxy-target-class="false"/>
+    <context:annotation-config/>
+    <context:component-scan base-package="com.nik"/>
+</beans>
