@@ -24,6 +24,7 @@
         <module>spring13-shiwu</module>
         <module>spring-ioc-juejin-01</module>
         <module>spring-ioc-juejin-02</module>
+        <module>spring-ioc-juejin-03</module>
     </modules>
 
     <properties>
