@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--xml方式的setter注入-->
+    <bean id="person" class="com.itgood.bean.Person">
+        <property name="id" value="1"/>
+        <property name="age" value="23"/>
+        <property name="name" value="nkc"/>
+    </bean>
+
+    <context:property-placeholder location="classpath:red.properties"/>
+    <!--xml方式的构造注入-->
+    <bean id="cat" class="com.itgood.bean.Cat">
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="公"/>
+    </bean>
+
+
+</beans>
