@@ -8,6 +8,7 @@
 
     <bean id="red" class="com.bean.Red"/>
 
-    <bean id="dog" class="com.bean.Dog"/>
+<!--    <bean id="dog" class="com.bean.Dog"/>-->
 
+    <bean id="cat" class="com.bean.Cat"/>
 </beans>
