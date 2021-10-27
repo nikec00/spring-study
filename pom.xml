@@ -9,22 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>spring-01-ioc1</module>
-        <module>spring-02-hellospring</module>
-        <module>spring-03-ioc2</module>
-        <module>spring-04-di</module>
-        <module>spring-05-autowire</module>
-        <module>spring-06-anno</module>
-        <module>spring-07-config</module>
-        <module>spring-08-proxy</module>
-        <module>spring-09-aop</module>
-        <module>spring-10-mybatis</module>
-        <module>spring-11-test1</module>
-        <module>spring-12</module>
-        <module>spring13-shiwu</module>
-        <module>spring-ioc-juejin-01</module>
-        <module>spring-ioc-juejin-02</module>
-        <module>spring-ioc-juejin-03</module>
+        <module>01-spring-itnkc-where</module>
+        <module>02-spring-itnkc-ioc</module>
+        <module>03-spring-itnkc-ioc</module>
     </modules>
 
     <properties>
