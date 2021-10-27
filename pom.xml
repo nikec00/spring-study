@@ -12,6 +12,7 @@
         <module>01-spring-itnkc-where</module>
         <module>02-spring-itnkc-ioc</module>
         <module>03-spring-itnkc-ioc</module>
+        <module>04-spring-itnkc-ioc-anno</module>
     </modules>
 
     <properties>
@@ -33,6 +34,16 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
             <version>1.9.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.2.8.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
         </dependency>
     </dependencies>
 </project>
