@@ -1,6 +1,7 @@
 package com.itgood;
 
 import com.itgood.bean.Cat;
+import com.itgood.bean.Zoo;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -14,5 +15,8 @@ public class TestApplication {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext("com.itgood.configuration");
         Cat cat = applicationContext.getBean(Cat.class);
         System.out.println(cat);
+
+        Zoo zoo = applicationContext.getBean(Zoo.class);
+        System.out.println(zoo);
     }
 }

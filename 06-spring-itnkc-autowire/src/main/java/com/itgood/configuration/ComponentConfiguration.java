@@ -1,5 +1,6 @@
 package com.itgood.configuration;
 
+import com.itgood.bean.Dog;
 import com.itgood.bean.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -18,5 +19,10 @@ public class ComponentConfiguration {
     @Bean
     public Person master() {
         return new Person("master");
+    }
+
+    @Bean
+    public Dog xiaohuang() {
+        return new Dog("xiaohuang");
     }
 }
