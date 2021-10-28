@@ -24,8 +24,8 @@ public class Cat {
     @Value("#{admin.name + 'dog!!'}")
     private String name;
 
-    @Autowired
-    @Qualifier("master")
+    @Autowired(required = false)
+    @Qualifier("master") // IOC容器中存放两个相同类型的person，如果不指定其名称就不知道注入哪一个person
     private Person person;
 
 //    @Autowired

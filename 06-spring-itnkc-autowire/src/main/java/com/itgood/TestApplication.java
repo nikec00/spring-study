@@ -1,7 +1,6 @@
 package com.itgood;
 
 import com.itgood.bean.Cat;
-import com.itgood.configurations.ComponentConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
