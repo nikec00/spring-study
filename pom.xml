@@ -14,6 +14,7 @@
         <module>03-spring-itnkc-ioc</module>
         <module>04-spring-itnkc-ioc-anno</module>
         <module>05-spring-itnkc-ioc-di-spel</module>
+        <module>06-spring-itnkc-autowire</module>
     </modules>
 
     <properties>
