@@ -1,5 +1,7 @@
 package com.itgood.config;
 
+import com.itgood.beans.Cat;
+import com.itgood.beans.Dog;
 import com.itgood.beans.Pen;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -19,15 +21,15 @@ public class BeanConfiguration {
      *
      * @return
      */
-//    @Bean(initMethod = "init", destroyMethod = "destroy")
-//    public Cat cat() {
-//        return new Cat("兜兜");
-//    }
+    @Bean(initMethod = "init", destroyMethod = "destroy")
+    public Cat cat() {
+        return new Cat("兜兜");
+    }
 
-//    @Bean(initMethod = "init", destroyMethod = "destroy")
-//    public Dog dog() {
-//        return new Dog("哈士奇");
-//    }
+    @Bean(initMethod = "init", destroyMethod = "destroy")
+    public Dog dog() {
+        return new Dog("哈士奇");
+    }
     @Bean(initMethod = "open",destroyMethod = "close")
     public Pen pen() {
         return new Pen();
