@@ -1,24 +1,24 @@
-package com.itgood.beans;
+package com.itgood.prototype;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 /**
- * @Description： 三种生命周期共存。执行顺序-》 @PostConstruct → InitializingBean → init-method 。
+ * @Description：
  * @Author: nkc
- * @Date: 2021/11/5 09:53
+ * @Date: 2021/11/5 10:18
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Pen implements InitializingBean, DisposableBean {
+public class PenType implements InitializingBean, DisposableBean {
+
 
     private Integer ink;
 
