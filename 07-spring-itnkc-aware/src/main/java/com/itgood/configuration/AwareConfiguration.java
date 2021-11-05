@@ -1,7 +1,6 @@
 package com.itgood.configuration;
 
-import com.itgood.bean.AwaredTestBean;
-import org.junit.Before;
+import com.itgood.beans.AwaredTestBean;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -13,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @Date: 2021/11/1 14:56
  */
 @Configuration
-@ComponentScan("com.itgood.bean")
+@ComponentScan("com.itgood.beans")
 public class AwareConfiguration {
 
     @Bean

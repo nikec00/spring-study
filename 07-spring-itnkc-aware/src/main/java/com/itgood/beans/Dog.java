@@ -1,4 +1,4 @@
-package com.itgood.bean;
+package com.itgood.beans;
 
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;

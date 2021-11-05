@@ -1,6 +1,6 @@
 package com.itgood;
 
-import com.itgood.bean.Dog;
+import com.itgood.beans.Dog;
 import com.itgood.configuration.AwareConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

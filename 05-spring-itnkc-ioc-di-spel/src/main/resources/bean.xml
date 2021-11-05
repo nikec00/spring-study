@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--xml方式的setter注入-->
-    <bean id="person" class="com.itgood.bean.Person">
+    <bean id="person" class="com.itgood.beans.Person">
         <property name="id" value="1"/>
         <property name="age" value="23"/>
         <property name="name" value="nkc"/>
@@ -13,7 +13,7 @@
 
     <context:property-placeholder location="classpath:red.properties"/>
     <!--xml方式的构造注入-->
-    <bean id="cat" class="com.itgood.bean.Cat">
+    <bean id="cat" class="com.itgood.beans.Cat">
         <constructor-arg index="0" value="1"/>
         <constructor-arg index="1" value="公"/>
     </bean>

@@ -1,11 +1,10 @@
 package com.itgood;
 
-import com.itgood.bean.AwaredTestBean;
+import com.itgood.beans.AwaredTestBean;
 import com.itgood.configuration.AwareConfiguration;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
 
 /**
  * @Description：

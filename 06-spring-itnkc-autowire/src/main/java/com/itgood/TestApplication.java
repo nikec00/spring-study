@@ -1,7 +1,7 @@
 package com.itgood;
 
-import com.itgood.bean.Cat;
-import com.itgood.bean.Zoo;
+import com.itgood.beans.Cat;
+import com.itgood.beans.Zoo;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

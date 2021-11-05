@@ -1,4 +1,4 @@
-package com.itgood.bean;
+package com.itgood.beans;
 
 import lombok.Data;
 

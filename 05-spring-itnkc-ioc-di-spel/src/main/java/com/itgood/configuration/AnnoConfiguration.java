@@ -1,7 +1,7 @@
 package com.itgood.configuration;
 
-import com.itgood.bean.Cat;
-import com.itgood.bean.Person;
+import com.itgood.beans.Cat;
+import com.itgood.beans.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

@@ -1,6 +1,6 @@
 package com.itgood.main;
 
-import com.itgood.bean.Tom;
+import com.itgood.beans.Tom;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

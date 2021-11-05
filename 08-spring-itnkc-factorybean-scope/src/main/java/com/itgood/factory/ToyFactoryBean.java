@@ -1,9 +1,9 @@
 package com.itgood.factory;
 
 import com.itgood.abstracts.Toy;
-import com.itgood.bean.Ball;
-import com.itgood.bean.Car;
-import com.itgood.bean.Child;
+import com.itgood.beans.Ball;
+import com.itgood.beans.Car;
+import com.itgood.beans.Child;
 import org.springframework.beans.factory.FactoryBean;
 
 /**

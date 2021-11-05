@@ -1,8 +1,5 @@
 package com.itgood.config;
 
-import com.itgood.bean.Tom;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @Date: 2021/11/4 10:35
  */
 @Configuration
-@ComponentScan("com.itgood.bean")
+@ComponentScan("com.itgood.beans")
 public class ScopeConfiguration {
 
 

@@ -5,7 +5,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="child" class="com.itgood.bean.Child"/>
+    <bean id="child" class="com.itgood.beans.Child"/>
     <bean id="toyFactory" class="com.itgood.factory.ToyFactoryBean">
         <property name="child" ref="child"/>
     </bean>

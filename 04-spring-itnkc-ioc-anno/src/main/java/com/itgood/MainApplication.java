@@ -1,6 +1,6 @@
 package com.itgood;
 
-import com.itgood.bean.Person;
+import com.itgood.beans.Person;
 import com.itgood.config.QuickStartConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

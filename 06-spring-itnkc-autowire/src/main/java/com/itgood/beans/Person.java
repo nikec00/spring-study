@@ -1,23 +1,22 @@
-package com.itgood.bean;
+package com.itgood.beans;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
  * @Description：
  * @Author: nkc
- * @Date: 2021/10/28 17:31
+ * @Date: 2021/10/28 17:03
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Component("wangcai")
-public class Dog {
+@Component("admin")
+public class Person {
 
-    private String name = "wangcai";
+    private String name = "admin";
 }

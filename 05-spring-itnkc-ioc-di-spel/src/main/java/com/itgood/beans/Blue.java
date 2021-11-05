@@ -1,4 +1,4 @@
-package com.itgood.bean;
+package com.itgood.beans;
 
 import lombok.Data;
 import lombok.ToString;
@@ -6,20 +6,19 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
- * @Description： @Compont下的属性注入
+ * @Description：
  * @Author: nkc
- * @Date: 2021/10/27 17:02
+ * @Date: 2021/10/27 17:19
  */
 @Component
 @Data
 @ToString
-public class Black {
+public class Blue {
 
-    @Value("black-value-demo")
+    @Value("#{'blue-value-byspel'}")
     private String name;
 
-    @Value("0")
+    @Value("#{2}")
     private Integer order;
-
 
 }

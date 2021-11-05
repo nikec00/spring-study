@@ -1,4 +1,4 @@
-package com.itgood.bean;
+package com.itgood.beans;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,14 +9,14 @@ import org.springframework.stereotype.Component;
 /**
  * @Description：
  * @Author: nkc
- * @Date: 2021/10/28 17:03
+ * @Date: 2021/10/28 17:31
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Component("admin")
-public class Person {
+@Component("wangcai")
+public class Dog {
 
-    private String name = "admin";
+    private String name = "wangcai";
 }

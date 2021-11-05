@@ -1,6 +1,6 @@
 package com.itgood;
 
-import com.itgood.bean.*;
+import com.itgood.beans.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

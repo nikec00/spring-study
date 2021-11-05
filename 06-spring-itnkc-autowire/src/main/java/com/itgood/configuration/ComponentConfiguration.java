@@ -1,11 +1,10 @@
 package com.itgood.configuration;
 
-import com.itgood.bean.Dog;
-import com.itgood.bean.Person;
+import com.itgood.beans.Dog;
+import com.itgood.beans.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
 /**
  * @Description：
@@ -13,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @Date: 2021/10/28 17:13
  */
 @Configuration
-@ComponentScan("com.itgood.bean")
+@ComponentScan("com.itgood.beans")
 public class ComponentConfiguration {
 
     @Bean

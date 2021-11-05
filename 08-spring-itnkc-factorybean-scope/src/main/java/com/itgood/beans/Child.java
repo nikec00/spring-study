@@ -1,6 +1,4 @@
-package com.itgood.bean;
-
-import org.springframework.stereotype.Component;
+package com.itgood.beans;
 
 /**
  * @Description：

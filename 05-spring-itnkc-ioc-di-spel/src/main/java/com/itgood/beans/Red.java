@@ -1,4 +1,4 @@
-package com.itgood.bean;
+package com.itgood.beans;
 
 import lombok.ToString;
 import org.springframework.beans.factory.annotation.Value;
