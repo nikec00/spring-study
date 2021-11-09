@@ -18,6 +18,8 @@
         <module>07-spring-itnkc-aware</module>
         <module>08-spring-itnkc-factorybean-scope</module>
         <module>09-spring-itnkc-lifecycle</module>
+        <module>10-spring-itnkc-oftype</module>
+        <module>11-spring-itnkc-withannotation</module>
     </modules>
 
     <properties>
