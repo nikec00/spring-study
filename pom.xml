@@ -20,6 +20,8 @@
         <module>09-spring-itnkc-lifecycle</module>
         <module>10-spring-itnkc-oftype</module>
         <module>11-spring-itnkc-withannotation</module>
+        <module>09-spring-itnkc-lifecycle2</module>
+        <module>12-spring-itnkc-listablebeanfactory</module>
     </modules>
 
     <properties>
