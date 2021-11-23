@@ -12,6 +12,16 @@ public class User {
 
     private Integer age;
 
+
+    public User() {
+    }
+
+    public User(String userName, String gender, Integer age) {
+        this.userName = userName;
+        this.gender = gender;
+        this.age = age;
+    }
+
     public String getUserName() {
         return userName;
     }
