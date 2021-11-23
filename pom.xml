@@ -22,6 +22,7 @@
         <module>11-spring-itnkc-withannotation</module>
         <module>09-spring-itnkc-lifecycle2</module>
         <module>12-spring-itnkc-listablebeanfactory</module>
+        <module>13-spring-itnkc-aop</module>
     </modules>
 
     <properties>

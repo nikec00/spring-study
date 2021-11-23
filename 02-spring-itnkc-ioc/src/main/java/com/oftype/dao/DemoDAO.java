@@ -1,5 +1,10 @@
 package com.oftype.dao;
 
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.HierarchicalBeanFactory;
+import org.springframework.beans.factory.ListableBeanFactory;
+import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
+
 import java.util.List;
 
 /**
@@ -9,4 +14,5 @@ import java.util.List;
  */
 public interface DemoDAO {
     List findAll();
+
 }
