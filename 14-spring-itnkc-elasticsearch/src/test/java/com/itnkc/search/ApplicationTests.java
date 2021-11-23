@@ -28,12 +28,15 @@ import org.elasticsearch.search.aggregations.bucket.terms.TermsAggregationBuilde
 import org.elasticsearch.search.aggregations.metrics.Avg;
 import org.elasticsearch.search.aggregations.metrics.AvgAggregationBuilder;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @SpringBootTest
 public class ApplicationTests {
@@ -193,6 +196,31 @@ public class ApplicationTests {
             User user = JSON.parseObject(asString, User.class);
             System.out.println(user);
             System.out.println("-------------");
+        }
+    }
+
+
+    /**
+     * 高亮
+     */
+    @Test
+    public void highlighter() throws IOException {
+        SearchRequest searchRequest = new SearchRequest();
+
+        SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
+        HighlightBuilder highlightBuilder = new HighlightBuilder();
+        highlightBuilder.field("name").requireFieldMatch(false).preTags("<span style='color:red;'>").postTags("</span>");
+        searchSourceBuilder.highlighter(highlightBuilder).query(QueryBuilders.termQuery("name","呐喊"));
+
+        searchRequest.indices("users");
+        searchRequest.source(searchSourceBuilder);
+
+        SearchResponse response = client.search(searchRequest, RequestOptions.DEFAULT);
+        SearchHit[] hits = response.getHits().getHits();
+        for (SearchHit hit : hits) {
+            System.out.println(hit.getSourceAsString());
+            Map<String, HighlightField> highlightFields = hit.getHighlightFields();
+            highlightFields.forEach((k,v)-> System.out.println("key: "+k + " value: "+v.fragments()[0]));
         }
     }
 }
