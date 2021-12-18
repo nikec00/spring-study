@@ -23,6 +23,7 @@
         <module>09-spring-itnkc-lifecycle2</module>
         <module>12-spring-itnkc-listablebeanfactory</module>
         <module>13-spring-itnkc-aop</module>
+        <module>15-spring-itnkc-redis</module>
     </modules>
 
     <properties>
