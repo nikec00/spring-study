@@ -1,0 +1,20 @@
+server:
+  port: 3333
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/demo?characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=UTC
+    username: root
+    password: root
+  redis:
+    host: localhost
+    port: 6379
+  sms:
+    host: http://fesms.market.alicloudapi.com
+    path: /sms/
+    sign: 1
+    skin: 1
+    appCode: 46fa8dfaf32a442bbe72bef09ee05a37
+mybatis:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.itnkc.register.entity
