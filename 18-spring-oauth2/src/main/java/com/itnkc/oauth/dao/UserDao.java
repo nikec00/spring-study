@@ -1,6 +1,8 @@
 package com.itnkc.oauth.dao;
 
+import com.itnkc.oauth.entity.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * @Description：
@@ -9,4 +11,9 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface UserDao {
+    User selectOne(@Param("uid") String uid);
+
+    void update(User user);
+
+    void insert(User user);
 }

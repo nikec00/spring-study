@@ -2,5 +2,20 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
 <mapper namespace="com.itnkc.oauth.dao.UserDao">
+    <insert id="insert">
+        insert into sys_user
+        (social_uid,access_token,expires_in,gender,nikeName)
+        values
+        (#{social_uid},#{access_token},#{expires_in},#{gender},#{nikeName})
+    </insert>
+    <update id="update">
+        update sys_user
+        set id = #{id},access_token = #{access_token},expires_in=#{expires_in} WHERE id = #{id}
+    </update>
+
+    <select id="selectOne" resultType="com.itnkc.oauth.entity.User">
+        SELECT * FROM sys_user
+        WHERE social_uid = #{uid}
+    </select>
 
 </mapper>
