@@ -1,0 +1,5 @@
+spring:
+  rabbitmq:
+    host: 121.40.210.58
+    port: 5672
+    virtual-host: /
