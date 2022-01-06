@@ -1,5 +1,6 @@
 package com.itnkc.rabbitmq;
 
+import com.itnkc.rabbitmq.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.amqp.core.*;
@@ -40,9 +41,18 @@ public class RabbitMqApplicationTests {
         // String exchange,(交换机)
         // String routingKey,(路由键)
         // @Nullable Map<String, Object> arguments(聚合参数)
-        Binding binding = new Binding("hello-java-queue",Binding.DestinationType.QUEUE,
-                "hello-java-exchange","hello.java",new HashMap<>());
+        Binding binding = new Binding("hello-java-queue", Binding.DestinationType.QUEUE,
+                "hello-java-exchange", "hello.java", new HashMap<>());
         amqpAdmin.declareBinding(binding);
+    }
+
+    @Test
+    public void sendMessageTest() {
+        User user = new User();
+        user.setName("nike");
+        user.setGender("男");
+        user.setAge(23);
+        rabbitTemplate.convertAndSend("hello-java-exchange", "hello.java", user);
     }
 
 }
