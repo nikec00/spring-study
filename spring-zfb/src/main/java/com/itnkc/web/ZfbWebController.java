@@ -63,6 +63,11 @@ public class ZfbWebController {
     @PostMapping("/notifySuccess.html")
     @ResponseBody
     public String notifySuccess(HttpServletRequest request) throws AlipayApiException {
+        Map<String, String[]> map = request.getParameterMap();
+        for (String key : map.keySet()) {
+            String value = request.getParameter(key);
+            System.out.println("键：" + key + "==>值：" + value);
+        }
         System.out.println("收到支付宝异步通知******************");
         // 只要收到支付宝的异步通知，返回 success 支付宝便不再通知
         // 获取支付宝POST过来反馈信息

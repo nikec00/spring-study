@@ -18,7 +18,7 @@ public class ZfbServiceImpl implements ZfbService {
         PayVo payVo = new PayVo();
         payVo.setOut_trade_no(UUID.randomUUID().toString());
         payVo.setSubject("macBookPro m1pro 14寸");
-        payVo.setTotal_amount("14999");
+        payVo.setTotal_amount("14999.00");
         payVo.setBody("一台苹果笔记本电脑");
         return payVo;
     }
