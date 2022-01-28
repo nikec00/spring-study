@@ -1,9 +1,9 @@
 package com.itnkc.rabbitmq;
 
-import com.itnkc.rabbitmq.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.amqp.core.*;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -37,7 +37,7 @@ public class RabbitMqApplicationTests {
     @Test
     public void binding() {
         // String destination,(目的地)
-        // Binding.DestinationType destinationType,(目的地类型)
+        // Binding.DestinationType destinationType,(目的地类型)WWW
         // String exchange,(交换机)
         // String routingKey,(路由键)
         // @Nullable Map<String, Object> arguments(聚合参数)
@@ -48,11 +48,20 @@ public class RabbitMqApplicationTests {
 
     @Test
     public void sendMessageTest() {
-        User user = new User();
-        user.setName("nike");
-        user.setGender("男");
-        user.setAge(23);
-        rabbitTemplate.convertAndSend("hello-java-exchange", "hello.java", user);
+//        User user = new User();
+//        user.setName("nike");
+//        user.setGender("男");
+//        user.setAge(23);
+//        rabbitTemplate.convertAndSend("hello-java-exchange", "hello.java", user);
+    }
+
+    /**
+     * queue:声明需要监听的所有队列
+     * @param message
+     */
+    @RabbitListener(queues = {"hello-java-queue"})
+    public void rabbitListener(Object message) {
+        System.out.println("接收到了消息...内容：" + message + "==>类型：" + message);
     }
 
 }
